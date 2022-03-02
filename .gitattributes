@@ -1,1 +1,1 @@
-workflow.yml merge=ours
+.github/workflows/workflow.yml merge=ours
