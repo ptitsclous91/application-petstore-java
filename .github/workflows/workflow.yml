@@ -1,12 +1,12 @@
 # Docs for the Azure Web Apps Deploy action: https://go.microsoft.com/fwlink/?linkid=2134798
 # More GitHub Actions for Azure: https://go.microsoft.com/fwlink/?linkid=2135048
 
-name: Azure App Service - wamdemo (Production), Build and deploy Spring app
+name: Azure App Service - wamdemo (tst), Build and deploy Spring app
 
 on:
   push:
     branches:
-      - main
+      - tst
 
 jobs:
   build-and-deploy:
@@ -30,6 +30,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: wamdemo
-        slot-name: production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_77404F623E65485296759A871A5E3588 }}
+        slot-name: tst
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE__2f6d63b0a9734fd99830f7f26eeefc4f }}
         package: ${{ github.workspace }}/target/*.war
